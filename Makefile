@@ -7,8 +7,8 @@ iplimg: ipl.bin hebos.img Makefile
 sysimg: hebos.sys hebos.img Makefile
 	dd if=./hebos.sys of=hebos.img bs=1 count=512 conv=notrunc seek=0x4200
 
-sys: hebos.asm Makefile
-	nasm -o hebos.sys hebos.asm
+sys: asmhead.asm Makefile
+	nasm -o hebos.sys asmhead.asm
 
 .PHONY: empty
 empty:

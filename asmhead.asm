@@ -2,7 +2,7 @@ ORG 0xc200
 BITS 16
 
     CLI
-    LGDT gdt_info
+    LGDT [gdt_info]
     MOV EAX, CR0
     OR EAX, 1
     MOV CR0, EAX
